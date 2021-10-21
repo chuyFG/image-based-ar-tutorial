@@ -12,7 +12,8 @@
                 1,
                 2,
                 3,
-                4
+                4,
+                5
             ]
         }
     ],
@@ -20,15 +21,21 @@
         {
             "mesh" : 0,
             "name" : "Cube",
-            "scale" : [
-                50,
+            "rotation" : [
                 0,
-                300
+                0.7071068286895752,
+                0,
+                0.7071068286895752
+            ],
+            "scale" : [
+                30,
+                0,
+                250
             ],
             "translation" : [
-                50,
+                250,
                 0,
-                -300
+                -30
             ]
         },
         {
@@ -62,19 +69,6 @@
         {
             "mesh" : 1,
             "name" : "Cube.001",
-            "scale" : [
-                10,
-                1,
-                300
-            ],
-            "translation" : [
-                50,
-                1,
-                -300
-            ]
-        },
-        {
-            "name" : "Empty",
             "rotation" : [
                 0,
                 0.7071068286895752,
@@ -82,14 +76,41 @@
                 0.7071068286895752
             ],
             "scale" : [
+                10,
+                1,
+                250
+            ],
+            "translation" : [
+                250,
+                1,
+                -30
+            ]
+        },
+        {
+            "name" : "image",
+            "scale" : [
                 100,
                 2,
                 100
             ],
             "translation" : [
-                30,
-                4,
-                -250
+                250,
+                5,
+                -30
+            ]
+        },
+        {
+            "mesh" : 2,
+            "name" : "1018BackPanel",
+            "scale" : [
+                60,
+                2,
+                60
+            ],
+            "translation" : [
+                250,
+                5,
+                -30
             ]
         }
     ],
@@ -98,12 +119,9 @@
             "doubleSided" : true,
             "name" : "Material",
             "pbrMetallicRoughness" : {
-                "baseColorFactor" : [
-                    0.8000000715255737,
-                    0,
-                    0.4543803930282593,
-                    1
-                ],
+                "baseColorTexture" : {
+                    "index" : 0
+                },
                 "metallicFactor" : 0,
                 "roughnessFactor" : 0.4000000059604645
             }
@@ -120,6 +138,18 @@
                 ],
                 "metallicFactor" : 0,
                 "roughnessFactor" : 0.4000000059604645
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "1018BackPanel",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
             }
         }
     ],
@@ -151,6 +181,37 @@
                     "material" : 1
                 }
             ]
+        },
+        {
+            "name" : "1018BackPanel",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 7,
+                        "NORMAL" : 8,
+                        "TEXCOORD_0" : 9
+                    },
+                    "indices" : 10,
+                    "material" : 2
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 1,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "1018BackPanel",
+            "uri" : "1018BackPanel.png"
         }
     ],
     "accessors" : [
@@ -215,6 +276,40 @@
             "componentType" : 5126,
             "count" : 24,
             "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                4.103448390960693,
+                0,
+                0.5
+            ],
+            "min" : [
+                -4.103448390960693,
+                0,
+                -0.5
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5123,
+            "count" : 6,
+            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
@@ -252,11 +347,43 @@
             "buffer" : 0,
             "byteLength" : 192,
             "byteOffset" : 1416
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 1608
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 1656
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 1704
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 1736
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        },
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987,
+            "wrapS" : 33071,
+            "wrapT" : 33071
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 1608,
+            "byteLength" : 1748,
             "uri" : "scene.bin"
         }
     ]
